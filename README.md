@@ -59,7 +59,8 @@ npx sequelize-cli db:migrate
 Para rodar o servidor, execute:
 
 bash
-npm start
+node src\indez.js
+
 O servidor será iniciado na porta 5000 (ou na porta configurada no .env), e você verá a seguinte mensagem no console:
 
 yaml
