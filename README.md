@@ -25,14 +25,10 @@ git clone <URL_DO_REPOSITÓRIO>
 cd TaskHub-backend
 
 
-
-
-
-### 2. Instale as Dependências
+2. Instale as Dependências
 Dentro do diretório do projeto, instale as dependências:
 
 bash
-Copiar código
 npm install
 
 
@@ -40,33 +36,32 @@ npm install
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 env
-Copiar código
 DATABASE_URL=postgres://<SEU_USUÁRIO>:<SUA_SENHA>@localhost:5432/taskhub
 JWT_SECRET=uma_chave_secreta_segura
 DATABASE_URL: Configure com o usuário, senha e banco de dados do PostgreSQL.
 JWT_SECRET: Defina uma chave secreta para o JWT (use uma string complexa para segurança).
+
 4. Configure o Banco de Dados
 Certifique-se de que o PostgreSQL está rodando e crie o banco de dados:
 
 sql
-Copiar código
 CREATE DATABASE taskhub;
+
 5. Execute as Migrations
 Rode as migrations do Sequelize para criar as tabelas no banco:
 
 bash
-Copiar código
 npx sequelize-cli db:migrate
+
 6. Inicie o Servidor
 Para rodar o servidor, execute:
 
 bash
-Copiar código
 npm start
 O servidor será iniciado na porta 5000 (ou na porta configurada no .env), e você verá a seguinte mensagem no console:
 
 yaml
-Copiar código
+
 Servidor rodando na porta 5000
 Endpoints da API
 Autenticação
@@ -81,7 +76,7 @@ Copiar código
 }
 Resposta:
 json
-Copiar código
+
 {
   "token": "seu_token_jwt_aqui"
 }
@@ -95,7 +90,7 @@ Criar uma Tarefa
 Método: POST /api/tasks
 Body:
 json
-Copiar código
+
 {
   "title": "Título da Tarefa",
   "description": "Descrição da Tarefa"
@@ -110,7 +105,7 @@ Atualizar uma Tarefa
 Método: PUT /api/tasks/:id
 Body:
 json
-Copiar código
+
 {
   "title": "Novo Título",
   "description": "Nova Descrição",
@@ -126,7 +121,7 @@ Obter o Token JWT
 Faça uma requisição POST para /api/auth/login para obter o token JWT.
 No corpo da requisição, passe as credenciais do usuário:
 json
-Copiar código
+
 {
   "username": "usuario",
   "password": "senha"
@@ -136,13 +131,13 @@ Usar o Token JWT nas Rotas Protegidas
 Para acessar as rotas de tarefas, inclua o token JWT no cabeçalho da requisição:
 
 http
-Copiar código
+
 Authorization: Bearer <seu_token>
 Estrutura do Projeto
 Abaixo está a estrutura do projeto:
 
 plaintext
-Copiar código
+
 TaskHub-backend/
 ├── controllers/       # Lógica das rotas (TaskController, AuthController)
 ├── middleware/        # Middleware de autenticação
