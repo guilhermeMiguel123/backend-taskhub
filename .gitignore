@@ -1,3 +1,4 @@
-node_modules/
--t rsa
--t rsa.pub
+
+.DS_Store
+node_modules
+/dist
