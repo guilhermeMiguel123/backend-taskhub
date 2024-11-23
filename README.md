@@ -21,7 +21,7 @@ Antes de começar, você precisará ter o seguinte instalado:
 Faça o clone do repositório para sua máquina local:
 
 ```bash
-git clone <URL_DO_REPOSITÓRIO>
+git clone <https://github.com/guilhermeMiguel123/backend-taskhub>
 cd TaskHub-backend
 
 
@@ -31,6 +31,7 @@ Dentro do diretório do projeto, instale as dependências:
 bash
 npm install
 
+-
 
 3. Configure o Arquivo .env
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
