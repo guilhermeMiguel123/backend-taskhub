@@ -28,12 +28,14 @@ cd TaskHub-backend
 
 
 
-2. Instale as Dependências
+### 2. Instale as Dependências
 Dentro do diretório do projeto, instale as dependências:
 
 bash
 Copiar código
 npm install
+
+
 3. Configure o Arquivo .env
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
