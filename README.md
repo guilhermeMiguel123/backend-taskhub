@@ -21,7 +21,8 @@ Antes de começar, você precisará ter o seguinte instalado:
 Faça o clone do repositório para sua máquina local:
 
 ```bash
-git clone <https://github.com/guilhermeMiguel123/backend-taskhub>
+git clone https://github.com/guilhermeMiguel123/backend-taskhub.git
+
 cd TaskHub-backend
 
 
