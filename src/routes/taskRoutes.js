@@ -3,6 +3,10 @@
 const express = require('express');
 const router = express.Router();  // Criando o roteador para agrupar as rotas
 const TaskController = require('../controllers/TaskController'); // Certifique-se de que o caminho está correto
+const UserController = require('../controllers/UserController');  // Importa o controller de usuários
+
+// Rota de login
+router.post('/login', UserController.login);  // Configura a rota POST para /login que chama a função login
 
 // Definindo as rotas
 router.post('/', TaskController.createTask);  // Rota para criar uma tarefa
@@ -11,7 +15,9 @@ router.put('/:id', TaskController.updateTask); // Rota para atualizar uma tarefa
 router.delete('/:id', TaskController.deleteTask); // Rota para deletar uma tarefa
 
 module.exports = router; // Exportando as rotas
-// src/controllers/TaskController.js
+
+
+router.post('/login', UserController.login);
 
 const { Task } = require('../models/Task');  // Certifique-se de que o modelo Task está corretamente configurado
 
